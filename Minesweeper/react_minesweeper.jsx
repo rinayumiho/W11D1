@@ -3,7 +3,8 @@ import React from "react";
 import Game from "./components/game.jsx";
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+    const root = document.getElementById("root");
+    ReactDOM.render(<Game/>, root);
    
 
 })
@@ -14,4 +15,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-ReactDOM.render();

@@ -1,25 +1,26 @@
-import React from "react"
+import React from "react";
+import * as Minesweeper from "../minesweeper";
 
 export default class Game extends React.Component {
     constructor(props) {
         super(props) 
         this.state = {
-            board: new Board()
+            board: new Minesweeper.Board()
         }
         this.updateGame = this.updateGame.bind(this)
     }
     
-    updateGame(tile) {
-
+    updateGame() {
+        
     }
 
     render() {
-        let board = this.state.board;
 
-        board.forEach(row => {
-            row.forEach(tile => {
-                this.updateGame(tile)
-            })
-        });
+        
+        return (
+            <Board board={this.state.board} updateGame={this.updateGame}/>
+
+            
+        )
     }
 }
